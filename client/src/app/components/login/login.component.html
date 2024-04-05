@@ -1,0 +1,28 @@
+<div class="rounded shadow-lg h-screen flex justify-center items-center">
+    <div class="bg-white border md:grid md:grid-cols-10 md:w-4/6 rounded shadow-lg p-5">
+        <div class="md:col-span-6">
+            <div class="text-center mb-2">
+                <h1 class="text-xl md:text-4xl">Welcome back!</h1>
+                <p>We're so excited to see you again!</p>
+            </div>
+            <div class="rounded border shadow-lg">
+                <form class="m-2" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <label>&nbsp; Email or Username<span class="text-red-500">*</span></label><br>
+                      <input class="flex w-full rounded border-2 h-9 mb-2" formControlName="email" type="email">
+    
+                    <label>&nbsp; Password<span class="text-red-500">*</span></label>
+                      <input class="flex w-full rounded border-2 h-9 mb-1" formControlName="password" type="password">
+    
+                    <button class="text-purple-600 hover:underline hover:text-purple-900 mb-4" (click)="navigateToForgotPassword()">Forgot your password?</button><br>
+                  
+                    <button class="w-full h-9 bg-purple-600 hover:bg-purple-700 rounded text-lg" (click)="navigateToChannels()" type="submit">Login</button>
+                  </form>
+                  <p class="mb-2 mx-2">Need an account? <button class="text-purple-600 hover:underline hover:text-purple-900" (click)="navigateToRegister()">Register</button></p>
+            </div>
+        </div>
+        <div class="hidden md:flex col-span-4 items-center place-content-center">            
+            <img class="w-full ml-4" src="../../../assets/images/cyberecho_logo.png" alt="CyberEcho Logo">
+        </div>
+    </div>
+    
+</div>
